@@ -33,14 +33,6 @@ stages:
     pool:
       name: agentX
     steps:   
-    - task: NodeTool@0
-      inputs:
-        versionSpec: '14.20'
-    - task: Npm@0
-      displayName: 'Install application dependencies'
-      inputs:
-        cwd: Application
-        arguments: '--force'
     - task: AzureAppServiceSettings@1
       inputs:
         azureSubscription: $(azureSubscription)
